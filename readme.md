@@ -1,12 +1,11 @@
-"/api/emp"
+("/api/emp")
 "/api/stud"
 "/api/room"
 "/api/product"
 "/api/event"
 "/api/expance"
 "/api/system"
-"/api/cart",
-
+("/api/cart")
 const mongoose = require("mongoose")
 
 const cartSchema = new mongoose.Schema({

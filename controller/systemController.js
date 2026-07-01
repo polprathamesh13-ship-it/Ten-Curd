@@ -10,8 +10,8 @@ exports.getSystem = async (req,res) => {
 }
 exports.postSystem = async (req,res) => {
     try {
-        const data = await System.create()
-        res.json({errors:false,data:Data})
+        const data = await System.create(req.body)
+        res.json({errors:false,data:data})
     } catch (error) {
         res.status(500).json({errors:true,message:error.message})
     }
