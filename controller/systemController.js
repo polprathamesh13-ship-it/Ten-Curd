@@ -1,14 +1,14 @@
 const System = require("../model/systemModule")
 
-exports.getSystem = async (req,rea) => {
+exports.getSystem = async (req,res) => {
     try {
         const data = await System.find()
-        res.json({errors:false,data:Data})
+        res.json({errors:false,data:data})
     } catch (error) {
         res.status(500).json({errors:true,message:error.message})
     }
 }
-exports.postSystem = async (req,rea) => {
+exports.postSystem = async (req,res) => {
     try {
         const data = await System.create()
         res.json({errors:false,data:Data})
